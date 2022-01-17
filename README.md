@@ -29,7 +29,7 @@ module.exports = {
 
 ### Create the bucket in Amazon S3
 
-* No particular config
+* Public access needs to be granted
 
 ### Upload the files there
 
@@ -44,6 +44,7 @@ module.exports = {
 * For Origin access identity, select Create new OAI. Then, enter the OAI name and choose Create.
 * For Bucket policy, select Yes, update the bucket policy.
 * Edge locations: select only north America and Europe
+* Have index.html as default root object
 * You then have a cloudfront url
 
 ## Optional - DNS setup
