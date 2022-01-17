@@ -2,6 +2,8 @@
 
 ## Static website generation using next.js
 
+### From scratch
+
 * Create a next.js project with npx `create-next-app`
 * In the scripts section of package.json, add `"build": "next build && next export",`
 * In `next.config.js`,  add the following content:
@@ -16,6 +18,11 @@ module.exports = {
 }
 ```
 
+* You can now produce a static website using `yarn build`
+
+### Using this repository
+
+* Install dependencies with `yarn install`
 * You can now produce a static website using `yarn build`
 
 ## Bucket creation
