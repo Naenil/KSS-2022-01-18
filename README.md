@@ -43,6 +43,7 @@ module.exports = {
 * For S3 bucket access, select Yes use OAI (bucket can restrict access to only CloudFront).
 * For Origin access identity, select Create new OAI. Then, enter the OAI name and choose Create.
 * For Bucket policy, select Yes, update the bucket policy.
+* Edge locations: select only north America and Europe
 * You then have a cloudfront url
 
 ## Optional - DNS setup
