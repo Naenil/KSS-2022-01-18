@@ -50,3 +50,14 @@ module.exports = {
 ## Optional - DNS setup
 
 * Make ALIAS on Route53, or CNAME records anywhere else to point towards [distributioj].cloudfront.net
+
+## Optional - Content change
+
+* Because by default Cloudfront content is cached, you need to create an "invalidation" if you want to reset it, or use a different origin access policy
+
+
+```sh
+aws cloudfront create-invalidation \
+    --distribution-id <id> \
+    --paths '/*'
+```
