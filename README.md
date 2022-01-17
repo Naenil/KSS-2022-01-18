@@ -47,9 +47,10 @@ module.exports = {
 * Have index.html as default root object
 * You then have a cloudfront url
 
-## Optional - DNS setup
+## DNS setup
 
-* Make ALIAS on Route53, or CNAME records anywhere else to point towards [distributioj].cloudfront.net
+* Make ALIAS on Route53, or CNAME records anywhere else to point towards [distribution].cloudfront.net
+* [Import certificate in ACM for your DNS zone](https://docs.aws.amazon.com/acm/latest/userguide/dns-validation.html)
 
 ## Optional - Content change
 
