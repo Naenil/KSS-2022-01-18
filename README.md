@@ -1,6 +1,6 @@
 # KSS - Fast and cost-effective website deployment using AWS CloudFront - Demo
 
-## 1. Static website generation using next.js
+## Static website generation using next.js
 
 * Create a next.js project with npx `create-next-app`
 * In the scripts section of package.json, add `"build": "next build && next export",`
@@ -18,8 +18,26 @@ module.exports = {
 
 * You can now produce a static website using `yarn build`
 
-## 2. Bucket creation
+## Bucket creation
 
-## 3. CDN creation
+### Create the bucket in Amazon S3
 
-## 4. Optional - DNS setup
+* No particular config
+
+### Upload the files there
+
+* Using the AWS CLI, you want to run
+* `aws s3 sync kss/out s3://YOUR_BUCKET/`
+
+## CDN creation
+
+* [Using this method](https://aws.amazon.com/premiumsupport/knowledge-center/cloudfront-serve-static-website/)
+* For Origin domain, select the bucket that you created.
+* For S3 bucket access, select Yes use OAI (bucket can restrict access to only CloudFront).
+* For Origin access identity, select Create new OAI. Then, enter the OAI name and choose Create.
+* For Bucket policy, select Yes, update the bucket policy.
+* You then have a cloudfront url
+
+## Optional - DNS setup
+
+* Make ALIAS on Route53, or CNAME records anywhere else to point towards [distributioj].cloudfront.net
